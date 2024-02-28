@@ -29,9 +29,17 @@ for img_file in img_files_list[:10]:
     images.append(temp_tupple) #This is the final tupple
 
 
+#Turn the list of tupples into evidence and row lists
+evidence=[]
+labels=[]
+for image in images:
+    evidence=image[0]
+    labels=image[1]
+
+
 #Seperate data into training and testing groups
-evidence=[row["evidence"] for row in images]
-labels=[row["label"] for row in images]
+#evidence=[row["evidence"] for row in images]
+#labels=[row["label"] for row in images]
 X_training, X_testing, y_training, ytesting=train_test_split(
     evidence, labels, test_size=0.4
 )
