@@ -1,4 +1,4 @@
-import cv2
+import cv2 #https://www.askpython.com/python/examples/convert-images-to-numpy-arrays
 import numpy as np
 import os
 import sys
@@ -21,7 +21,7 @@ def main():
 
     # Get image arrays and labels for all image files
     #images, labels = load_data(sys.argv[1])
-    images, labels = load_data("C:/Users/kahin/Documents/AI/gtsrb/7") #Testing on single directory
+    images, labels = load_data("C:/Users/kahin/Documents/CS50/gtsrb/7") #Testing on single directory
     #"C://Users//Vanshi//Desktop//gfg"
     #"C:\Users\kahin\Documents\AI"
 
@@ -78,6 +78,8 @@ def load_data(data_dir):
 
 
 def get_model():
+#https://www.youtube.com/watch?v=J1QD9hLDEDY&t=3072s  Minute 50:
+
     """
     Returns a compiled convolutional neural network model. Assume that the
     `input_shape` of the first layer is `(IMG_WIDTH, IMG_HEIGHT, 3)`.
