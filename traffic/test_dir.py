@@ -40,7 +40,7 @@ for image in images:
 #Seperate data into training and testing groups
 #evidence=[row["evidence"] for row in images]
 #labels=[row["label"] for row in images]
-X_training, X_testing, y_training, ytesting=train_test_split(
+X_training, X_testing, y_training, y_testing=train_test_split(
     evidence, labels, test_size=0.4
 )
 
