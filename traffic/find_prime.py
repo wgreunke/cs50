@@ -9,17 +9,18 @@ prime_list=[]
 #prime_list.append(2) #Add the trivial numbers to get things started
 prime_list.append(3)
 #start counting up
-for i in range(5,20):
+for i in range(5,200000,2):
     #print("i",i)
-    half_prime=round(len(prime_list))+2
-    print("half prime", half_prime)
-    counter=0
+    half_prime=round(len(prime_list))
+    #print("half prime", half_prime)
+    counter=1
     for prime in prime_list:
         counter=counter+1
-        print("i",i,"Prime", prime, "counter", counter)
+        #print("i",i,"Prime", prime, "counter", counter)
         #print("mod",i%prime)
         if(counter>half_prime):
             prime_list.append(i)
+            print(prime)
         if(counter>half_prime):
                 break
         if(i%prime)==0:
