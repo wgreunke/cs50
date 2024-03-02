@@ -41,7 +41,11 @@ print(labels)
 #Seperate data into training and testing groups
 #evidence=[row["evidence"] for row in images]
 #labels=[row["label"] for row in images]
+<<<<<<< HEAD
 X_training, X_testing, Y_training, Y_testing=train_test_split(
+=======
+X_training, X_testing, y_training, y_testing=train_test_split(
+>>>>>>> e154eb8a3237b731d6e21831157e0500e0920ae1
     evidence, labels, test_size=0.4
 )
 
