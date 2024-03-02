@@ -2,19 +2,18 @@
 import os
 import cv2
 from sklearn.model_selection import train_test_split
+import tensorflow as tf
+
+
 print("")
+print("********************New Run*******************")
 print("")
+
 
 cur_path = os.path.dirname(__file__)
-data_dir="C:\\Users\\kahin\\Documents\\CS50\\gtsrb\\7"
-#dir_list = os.listdir(data_dir)
-new_path = os.path.join(cur_path,"gtsrb\\7")
 
-#print("The current path is", cur_path)
-
-#print("The new path is")
-#print(new_path)
-# prints all files
+new_path = os.path.join(cur_path,"\\Users\\kahin\\Documents\\cs502\\gtsrb\\7")  #Not the best but gets you to correct directory
+print("New Path", new_path)
  
 images=[] # a blank list
 #This section lists all the images in the directory.  Start with only one image.
@@ -33,39 +32,32 @@ for img_file in img_files_list[:10]:
 evidence=[]
 labels=[]
 for image in images:
-    evidence=image[0]
-    labels=image[1]
+    evidence.append(image[0])
+    labels.append(image[1])
 
+
+print(labels)
 
 #Seperate data into training and testing groups
 #evidence=[row["evidence"] for row in images]
 #labels=[row["label"] for row in images]
-X_training, X_testing, y_training, ytesting=train_test_split(
+X_training, X_testing, Y_training, Y_testing=train_test_split(
     evidence, labels, test_size=0.4
 )
 
-print(y_training) 
+#Define
+model=Sequential()
 
 
 
+#Compile
+
+#Train
+
+#Evaluate
 
 
 
-
-
-
-
-#image_path=os.path.join(cur_path,"gtsrb\\7\\00027_00026.ppm")
-#print("image path is",image_path)
-
-#Now convert the image
-#print(image_content.shape)
-
-#image_tupple=(image_content,"7")
-#print(image_tupple)
-
-
-#Create a tupple with the image and the label
 
 
 
